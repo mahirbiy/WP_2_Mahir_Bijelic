@@ -1,0 +1,48 @@
+<div class="quiz-container">
+    <h1>K V I Z</h1>
+    <p class="intro">
+        Dobrodošli u studentski kviz! Testirajte svoje znanje o HTML-u i osnovama weba.<br>
+        Odaberite tačan odgovor(e) za svako pitanje.
+    </p>
+
+    <form class="quiz-form">
+        <h3>1. Šta je skraćenica HTML?</h3>
+        <label><input type="radio" [(ngModel)]="userAnswers.q1" name="q1" value="a"> HyperText Markup Language</label>
+        <label><input type="radio" [(ngModel)]="userAnswers.q1" name="q1" value="b"> HighText Markdown Language</label>
+        <label><input type="radio" [(ngModel)]="userAnswers.q1" name="q1" value="c"> HyperText Makeup Language</label>
+
+        <h3>2. Koje se oznake koriste za izradu popisa u HTML-u?</h3>
+        <label><input type="checkbox" [(ngModel)]="userAnswers.q2.a" name="q2a"> &lt;ul&gt;</label>
+        <label><input type="checkbox" [(ngModel)]="userAnswers.q2.b" name="q2b"> &lt;ol&gt;</label>
+        <label><input type="checkbox" [(ngModel)]="userAnswers.q2.c" name="q2c"> &lt;li&gt;</label>
+        <label><input type="checkbox" [(ngModel)]="userAnswers.q2.d" name="q2d"> &lt;br&gt;</label>
+
+        <h3>3. Koja se oznaka koristi za umetanje slike?</h3>
+        <label><input type="radio" [(ngModel)]="userAnswers.q3" name="q3" value="a"> &lt;image&gt;</label>
+        <label><input type="radio" [(ngModel)]="userAnswers.q3" name="q3" value="b"> &lt;img&gt;</label>
+        <label><input type="radio" [(ngModel)]="userAnswers.q3" name="q3" value="c"> &lt;src&gt;</label>
+
+        <h3>4. Koji od sljedećih su valjani HTML atributi?</h3>
+        <label><input type="checkbox" [(ngModel)]="userAnswers.q4.a" name="q4a"> href</label>
+        <label><input type="checkbox" [(ngModel)]="userAnswers.q4.b" name="q4b"> src</label>
+        <label><input type="checkbox" [(ngModel)]="userAnswers.q4.c" name="q4c"> bold</label>
+        <label><input type="checkbox" [(ngModel)]="userAnswers.q4.d" name="q4d"> alt</label>
+
+        <h3>5. Koji je ispravan način za stvaranje linkova u HTML-u?</h3>
+        <label><input type="radio" [(ngModel)]="userAnswers.q5" name="q5" value="a"> &lt;a url="..."&gt;Click&lt;/a&gt;</label>
+        <label><input type="radio" [(ngModel)]="userAnswers.q5" name="q5" value="b"> &lt;a href="..."&gt;Click&lt;/a&gt;</label>
+        <label><input type="radio" [(ngModel)]="userAnswers.q5" name="q5" value="c"> &lt;link&gt;Click&lt;/link&gt;</label>
+
+        <button type="button" class="quiz-btn" (click)="checkAnswers()">Provjerite odgovore</button>
+    </form>
+</div>
+
+@if (showModal) {
+    <div class="result-modal">
+        <div class="modal-content">
+            <h2>Rezultat</h2>
+            <p>Osvojili ste {{score}} od {{total}} poena!</p>
+            <button class="quiz-btn" (click)="resetQuiz()">Pokušaj ponovno</button>
+        </div>
+    </div>
+}

@@ -1,0 +1,88 @@
+.header {
+  background: white;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 5px 20px; 
+  height: 80px; 
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+.main-logo {
+  max-height: 60px; 
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.main-logo:hover {
+  transform: scale(1.05); 
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover, .active {
+  color: #3498db !important;
+}
+
+.auth-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #3498db;
+  border: 1px solid #3498db;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #3498db;
+  color: white;
+}
+
+.btn-danger {
+  background: #ff5f5f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
+  background: #e04e4e;
+}

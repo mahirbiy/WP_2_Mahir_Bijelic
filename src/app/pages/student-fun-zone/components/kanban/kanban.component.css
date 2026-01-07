@@ -1,0 +1,90 @@
+.kanban-wrapper h2 {
+    color: #597a94;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.2em;
+    border-bottom: 2px solid #597a94;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin: 20px 0 30px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.buttons button {
+    background: #9bbdd4;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.buttons button:hover { background: #7fa4bf; }
+.buttons .danger { background: #d66b6b; }
+.buttons .danger:hover { background: #b95454; }
+
+.board {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #F8F8F8;
+    border-radius: 12px;
+}
+
+.column {
+    background: #ffffff;
+    border-radius: 15px;
+    width: 33%;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 400px;
+}
+
+.task {
+    background: #fff9c4;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: grab;
+    border-left: 5px solid #ffeb3b;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

@@ -1,0 +1,59 @@
+<div class="profile-wrapper" *ngIf="user">
+    <div class="profile-header">
+      <div class="avatar-section">
+        <div class="avatar-circle">
+          {{ user.ime?.charAt(0) }}{{ user.prezime?.charAt(0) }}
+        </div>
+        <span class="status-badge">Online</span>
+      </div>
+      <div class="user-details">
+        <h1>{{ user.ime }} {{ user.prezime }}</h1>
+        <p class="university">Internacionalna poslovno-informaciona akademija</p>
+        <p class="email">{{ user.email }}</p>
+      </div>
+    </div>
+    <div class="settings-card glass-effect">
+        <div class="theme-grid">
+          <div class="theme-item" (click)="promijeniTemu('plava')">
+            <div class="color-preview plava-gradijent"></div>
+          </div>
+          <div class="theme-item" (click)="promijeniTemu('zelena')">
+            <div class="color-preview zelena-gradijent"></div>
+          </div>
+          <div class="theme-item" (click)="promijeniTemu('roza')">
+            <div class="color-preview roza-gradijent"></div>
+          </div>
+          <div class="theme-item" (click)="promijeniTemu('tamna')">
+            <div class="color-preview tamna-gradijent"></div>
+          </div>
+        </div>
+      </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="value">{{ stats.kanbanDone }}</div>
+        <div class="label">Završeni zadaci</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">{{ stats.quizBest }}/5</div>
+        <div class="label">Najbolji Kviz</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">{{ stats.bingoFields }}</div>
+        <div class="label">Bingo polja</div>
+      </div>
+    </div>
+  
+    <div class="achievements-section">
+      <h3>Bedževi postignuća</h3>
+      <div class="badge-container">
+        <div class="badge" [class.locked]="stats.quizBest < 5">
+          <span class="badge-icon">🔥</span>
+          <p>HTML Master</p>
+        </div>
+        <div class="badge" [class.locked]="stats.kanbanDone < 1">
+          <span class="badge-icon">🚀</span>
+          <p>Organizator</p>
+        </div>
+      </div>
+    </div>
+  </div>

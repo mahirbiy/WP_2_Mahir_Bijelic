@@ -1,0 +1,110 @@
+.pozadina-staklo {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f2f5;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  
+  .plavi-krug {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #bfdbfe;
+    border-radius: 50%;
+    filter: blur(100px);
+    top: -100px;
+    right: -50px;
+    opacity: 0.6;
+  }
+  
+  .ljubicasti-krug {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #ddd6fe;
+    border-radius: 50%;
+    filter: blur(100px);
+    bottom: -100px;
+    left: -50px;
+    opacity: 0.6;
+  }
+  
+ 
+  .glavna-kartica {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(20px); 
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 40px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .zaglavlje h1 { color: #1e293b; margin: 0; }
+  .zaglavlje p { color: #64748b; margin-top: 5px; }
+  .ipi-logo { color: #3b82f6; font-weight: 800; font-size: 1.2rem; }
+  
+  .sadrzaj-kontakta {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+  }
+  
+  .info-polje {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+    color: #334155;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+  }
+  
+  .unos-polje {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    color: #1e293b;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .unos-polje:focus {
+    border-color: #3b82f6;
+    background: white;
+  }
+  
+  .dugme-posalji {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .dugme-posalji:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+  }
+  
+  
+  @media (max-width: 700px) {
+    .sadrzaj-kontakta { grid-template-columns: 1fr; }
+  }

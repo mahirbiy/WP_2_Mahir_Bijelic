@@ -1,0 +1,34 @@
+.trackers-page { padding: 40px; background-color: var(--pozadina) !important; min-height: 100vh; font-family: 'Poppins', sans-serif; }
+
+.analytics-pill {
+  display: flex; align-items: center; justify-content: center; gap: 30px;
+  background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(15px);
+  padding: 20px 45px; border-radius: 60px; max-width: 500px; margin: 0 auto 50px;
+  box-shadow: 0 10px 30px var(--sjena);
+}
+
+.circular-chart { width: 90px; height: 90px; }
+.circle-bg { fill: none; stroke: rgba(0, 0, 0, 0.05); stroke-width: 3.5; }
+.circle { fill: none; stroke: var(--akcent); stroke-width: 3.5; stroke-linecap: round; transition: stroke-dasharray 0.8s ease; }
+.percentage { fill: var(--tekst-glavni); font-size: 9px; font-weight: 800; text-anchor: middle; }
+
+.tracker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1000px; margin: 0 auto; }
+.card {
+  background-color: var(--kontejner-bg) !important; padding: 30px; border-radius: 30px;
+  box-shadow: 0 8px 25px var(--sjena); cursor: pointer; transition: 0.3s; color: var(--tekst-glavni);
+}
+.card:hover { transform: translateY(-8px); }
+.locked-card { border-bottom: 6px solid var(--akcent) !important; }
+
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; z-index: 2000; }
+.glass-modal { background: var(--kontejner-bg) !important; padding: 40px; border-radius: 35px; width: 90%; max-width: 400px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); position: relative; }
+
+.modal-input { width: 100%; padding: 14px; margin-top: 10px; border-radius: 14px; border: 1px solid #f0f0f0; background: #f9fbff; color: var(--tekst-glavni); font-family: inherit; }
+.row-inputs { display: flex; gap: 10px; }
+
+.streak-box { background: rgba(255, 107, 107, 0.1); color: #ff6b6b; padding: 10px; border-radius: 12px; margin: 15px 0; font-weight: 700; text-align: center; border: 1px dashed #ff6b6b; }
+.btn-save { width: 100%; padding: 16px; margin-top: 25px; border-radius: 18px; border: none; background: var(--akcent); color: white; font-weight: 700; cursor: pointer; }
+.close-btn { position: absolute; top: 20px; right: 20px; font-size: 26px; border: none; background: none; cursor: pointer; color: #ccc; }
+
+label { display: block; font-size: 13px; font-weight: 600; margin-top: 12px; color: var(--tekst-glavni); text-align: left; opacity: 0.8; }
+textarea { resize: none; min-height: 60px; }

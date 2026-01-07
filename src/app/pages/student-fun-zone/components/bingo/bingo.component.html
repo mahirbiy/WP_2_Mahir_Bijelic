@@ -1,0 +1,22 @@
+<div class="bingo-container">
+    <div id="bingo-content">
+        <h2>Bingo Challenge</h2>
+        <p class="info">Pronađi nekoga ko odgovara opisima i popuni 5 polja zaredom — BINGO!</p>
+
+        <table class="bingo-table">
+            @for (row of bingoRows; track rowIndex; let rowIndex = $index) {
+                <tr>
+                    @for (cell of row; track colIndex; let colIndex = $index) {
+                        <td [class.free]="rowIndex === 2 && colIndex === 2"
+                            [class.selected]="selectedCells[rowIndex][colIndex]"
+                            (click)="toggleCell(rowIndex, colIndex)">
+                            {{ cell }}
+                        </td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+
+    <button class="pdf-btn" (click)="generatePDF()">Preuzmi kao PDF</button>
+</div>

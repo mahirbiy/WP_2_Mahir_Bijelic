@@ -1,0 +1,21 @@
+<header class="header">
+    <nav class="navbar">
+     <div class="logo-container" (click)="router.navigate(['/dashboard'])">
+  <img src="assets/img/logo-ipi.png" alt="IPI Akademija Logo" class="main-logo">
+</div>
+      
+      <ul class="nav-links">
+        
+        <li><a routerLink="/o-kursevima" routerLinkActive="active">O kursevima</a></li>
+        <li><a routerLink="/popis-kurseva" routerLinkActive="active">Popis Kurseva</a></li>
+        <li><a routerLink="/raspored" routerLinkActive="active">Raspored</a></li>
+        <li><a routerLink="/kontakt" routerLinkActive="active">Kontakt</a></li>
+        
+      </ul>
+      
+  
+      <div class="auth-actions">
+        <button class="btn-secondary" routerLink="/login">Login</button>
+      </div>
+    </nav>
+  </header>

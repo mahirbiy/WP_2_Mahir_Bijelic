@@ -1,0 +1,126 @@
+
+:root, [data-theme='plava'] {
+  --primarna-boja: #3498db;
+  --pozadina: #f4f7f6;
+  --tekst: #2c3e50;
+  --kartica-bg: #ffffff;
+}
+
+
+[data-theme='zelena'] {
+  --primarna-boja: #10b981;
+  --pozadina: #ecfdf5;
+  --tekst: #064e3b;
+  --kartica-bg: #ffffff;
+}
+
+
+[data-theme='roza'] {
+  --primarna-boja: #ed64a6;
+  --pozadina: #fff5f7;
+  --tekst: #702459;
+  --kartica-bg: #ffffff;
+}
+
+
+[data-theme='narandzasta'] {
+  --primarna-boja: #f6ad55;
+  --pozadina: #fffaf0;
+  --tekst: #7b341e;
+  --kartica-bg: #ffffff;
+}
+
+
+[data-theme='tamna'] {
+  --primarna-boja: #3b82f6;
+  --pozadina: #1a202c;
+  --tekst: #f8fafc;
+  --kartica-bg: #2d3748;
+}
+
+
+[data-theme='cyberpunk'] {
+  --primarna-boja: #f3f911;
+  --pozadina: #2b0057;
+  --tekst: #00ff9f;
+  --kartica-bg: #1a0033;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--pozadina) !important; 
+  color: var(--tekst);
+  transition: all 0.3s ease;
+}
+
+
+.course-card, .card, .glavna-kartica, .table-container {
+  background-color: var(--kartica-bg) !important;
+  color: var(--tekst);
+  border-bottom: 3px solid var(--primarna-boja);
+  transition: 0.3s;
+}
+
+.modern-table th {
+  background: var(--primarna-boja);
+  color: white;
+}
+
+.dugme-glavno, .btn-primary, .btn-save {
+  background-color: var(--primarna-boja) !important;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.dugme-glavno:hover {
+  opacity: 0.8;
+}
+
+
+.active-slot {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--primarna-boja);
+  font-weight: bold;
+}
+
+
+:root, [data-theme='plava'] {
+  --pozadina: #f0f4f8;
+  --kontejner-bg: #ffffff;
+  --tekst-glavni: #5a7d95;
+  --dugme-bg: #a2c2d8;
+  --akcent: #7fa4bf;
+  --sjena: rgba(149, 157, 165, 0.1);
+}
+
+[data-theme='zelena'] {
+  --pozadina: #f1f8f4;
+  --kontejner-bg: #ffffff;
+  --tekst-glavni: #6b8e75;
+  --dugme-bg: #b8d8be;
+  --akcent: #95c09e;
+  --sjena: rgba(107, 142, 117, 0.1);
+}
+
+[data-theme='roza'] {
+  --pozadina: #fff5f7;
+  --kontejner-bg: #ffffff;
+  --tekst-glavni: #b5838d;
+  --dugme-bg: #f5ccd4;
+  --akcent: #e5989b;
+  --sjena: rgba(181, 131, 141, 0.1);
+}
+
+[data-theme='tamna'] {
+  --pozadina: #2d3436;
+  --kontejner-bg: #3d4446;
+  --tekst-glavni: #dfe6e9;
+  --dugme-bg: #636e72;
+  --akcent: #81ecec;
+  --sjena: rgba(0, 0, 0, 0.3);
+}

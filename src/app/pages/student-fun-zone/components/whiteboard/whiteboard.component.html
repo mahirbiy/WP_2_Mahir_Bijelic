@@ -1,0 +1,34 @@
+<div class="drawing-area-container"> 
+    <div class="sidebar-toolbar">
+        <div class="tool-group">
+            <label>BOJA</label>
+            <input type="color" [(ngModel)]="brushColor" id="colorPicker"> 
+        </div>
+
+        <div class="tool-group">
+            <label>VELIČINA</label>
+            <input type="range" [(ngModel)]="brushSize" min="1" max="20">
+        </div>
+
+        <div class="action-buttons">
+            <button id="eraserBtn" (click)="isErasing = !isErasing">
+                {{ isErasing ? 'PIŠI' : 'BRIŠI' }}
+            </button> 
+            <button (click)="clearBoard()">ČISTI</button>
+            <button id="savePdfBtn" (click)="exportPDF()">PDF</button>
+            <button class="mail-btn-wb">POŠALJI MAILOM</button>
+        </div>
+    </div>
+    
+    <canvas #boardCanvas 
+            width="800" 
+            height="600"
+            (mousedown)="handleDraw($event)"
+            (mousemove)="handleDraw($event)"
+            (mouseup)="handleDraw($event)"
+            (mouseleave)="handleDraw($event)"
+            (touchstart)="handleDraw($event)"
+            (touchmove)="handleDraw($event)"
+            (touchend)="handleDraw($event)">
+    </canvas>
+</div>

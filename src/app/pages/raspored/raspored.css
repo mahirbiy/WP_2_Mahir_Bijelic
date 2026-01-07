@@ -1,0 +1,106 @@
+.elegant-container {
+    padding: 50px 20px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .page-header h1 {
+    font-size: 2.2rem;
+    color: #111827;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  
+  .page-header p {
+    color: #6b7280;
+    font-size: 1.1rem;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .day-col {
+    background: #fbfbfb;
+    border-radius: 16px;
+    padding: 12px;
+    border: 1px solid #f1f1f1;
+  }
+  
+  .day-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #374151;
+    padding: 10px 0 20px 0;
+    letter-spacing: 1px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    border: 1px solid #efefef;
+    border-left-width: 4px; 
+    transition: all 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+  
+  .time {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #9ca3af;
+    margin-bottom: 6px;
+  }
+  
+  .card h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #111827;
+    line-height: 1.2;
+  }
+  
+  .card p {
+    margin: 5px 0 12px 0;
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+  
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #f3f4f6;
+    color: #4b5563;
+  }
+  
+  
+  .border-blue { border-left-color: #3b82f6; }
+  .border-purple { border-left-color: #8b5cf6; }
+  .border-green { border-left-color: #10b981; }
+  .border-orange { border-left-color: #f59e0b; }
+  .border-red { border-left-color: #ef4444; }
+  
+ 
+  @media (max-width: 1100px) {
+    .calendar-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  }

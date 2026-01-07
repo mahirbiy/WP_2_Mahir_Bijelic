@@ -1,0 +1,38 @@
+<div class="kanban-wrapper">
+    <h2>Kanban ploča</h2>
+
+    <div class="buttons">
+        <button (click)="openModal()">+ DODAJ ZADATAK</button>
+        <button (click)="exportPDF()">SNIMI KAO PDF</button>
+        <button>POŠALJI MAILOM</button>
+        <button class="danger" (click)="clearBoard()">OČISTI PLOČU</button>
+    </div>
+
+    <div class="board" id="kanban-board">
+        @for (col of [{id:'todo', name:'To Do'}, {id:'progress', name:'In Progress'}, {id:'done', name:'Done'}]; track col.id) {
+            <div class="column" (dragover)="$event.preventDefault()" (drop)="onDrop($event, col.id)">
+                <h2>{{col.name}}</h2>
+                <div class="taskList">
+                    @for (task of getTasksByCol(col.id); track task) {
+                        <div class="task" draggable="true" (dragstart)="onDragStart($event, task, col.id)">
+                            {{task}}
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (showModal) {
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <h3>Novi zadatak</h3>
+                <input type="text" [(ngModel)]="newTaskText" placeholder="Upišite zadatak..." (keyup.enter)="addTask()">
+                <div class="modal-buttons">
+                    <button (click)="addTask()">Dodaj</button>
+                    <button class="cancel" (click)="closeModal()">Odustani</button>
+                </div>
+            </div>
+        </div>
+    }
+</div>

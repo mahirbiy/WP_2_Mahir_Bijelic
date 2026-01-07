@@ -1,0 +1,63 @@
+.bingo-container {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: #597a94; 
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.info {
+    font-size: 18px; 
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.bingo-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+.bingo-table td {
+    border: 2px solid #333; 
+    padding: 15px;
+    width: 140px;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.bingo-table td:hover {
+    background: #f7f7f7;
+}
+
+
+.free {
+    background: #ffeb99 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.selected:not(.free) {
+    background: #cce5ff;
+    border-color: #2980b9;
+}
+
+.pdf-btn {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 12px;
+    background: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 25px; 
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(41,128,185,0.5); 
+}

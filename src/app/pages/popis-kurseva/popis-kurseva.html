@@ -1,0 +1,17 @@
+<div class="page-header">
+    <h1>🎓 Dostupni Akademijski Predmeti</h1>
+    <p>Odaberite predmet i unaprijedite svoje vještine.</p>
+  </div>
+  
+  <div class="courses-grid">
+    @for (kurs of kursevi; track kurs.naziv) {
+      <div class="course-card">
+        <div class="card-icon">{{ kurs.ikona }}</div>
+        <h3>{{ kurs.naziv }}</h3>
+        <p>{{ kurs.opis }}</p>
+        <div class="card-footer">
+          <span class="ects">ECTS: {{ kurs.ects }}</span>
+        </div>
+      </div>
+    }
+  </div>

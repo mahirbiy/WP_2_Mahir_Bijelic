@@ -1,0 +1,69 @@
+<div class="trackers-page">
+    @if (aktivniAlat === 'izbornik') {
+      <div class="header-info">
+        <h1>STUDENT FUN ZONE</h1>
+        <p class="intro-text">
+          Mjesto gdje se učenje susreće sa zabavom! Koristite naše interaktivne alate za lakše planiranje, vizualizaciju i organizaciju projekata.
+        </p>
+      </div>
+  
+      <div class="fun-tools-grid">
+        
+        <div class="tool-card card-yellow" (click)="promijeniAlat('whiteboard')">
+          <h3>Whiteboard</h3>
+          <p>Brzo crtajte dijagrame, skicirajte ideje ili rješavajte probleme.</p>
+        </div>
+  
+        <div class="tool-card card-cyan" (click)="promijeniAlat('vision')">
+          <h3>Vision Board</h3>
+          <p>Kreirajte inspirativne kolaže, pinujte ciljeve, slike i motivacione citate.</p>
+        </div>
+  
+        <div class="tool-card card-orange" (click)="promijeniAlat('kanban')">
+          <h3>Kanban Board</h3>
+          <p>Organizujte zadatke u tri kolone (To Do, Progress, Done) koristeći drag-and-drop.</p>
+        </div>
+        
+        <div class="tool-card card-green" (click)="promijeniAlat('bingo')">
+          <h3>Igra: Bingo</h3>
+          <p>Testirajte sreću i znanje o pojmovima u našoj zabavnoj Bingo igri!</p>
+        </div>
+  
+        <div class="tool-card card-coral" (click)="promijeniAlat('kviz')">
+          <h3>Kviz Znanja</h3>
+          <p>Provjerite svoje znanje iz programiranja i osvojite bodove!</p>
+        </div>
+  
+      </div>
+    }
+  
+    @else {
+      <div class="alati-wrapper">
+        <button class="btn-back" (click)="promijeniAlat('izbornik')">⬅ Nazad na meni</button>
+  
+        <div class="solid-container">
+          
+          @if (aktivniAlat === 'whiteboard') {
+            <app-whiteboard></app-whiteboard>
+          }
+  
+          @if (aktivniAlat === 'kanban') {
+            <app-kanban></app-kanban>
+          }
+  
+          @if (aktivniAlat === 'bingo') {
+            <app-bingo></app-bingo>
+          }
+  
+          @if (aktivniAlat === 'kviz') {
+            <app-kviz></app-kviz>
+          }
+  
+          @if (aktivniAlat === 'vision') {
+            <app-vision-board></app-vision-board>
+          }
+  
+        </div>
+      </div>
+    }
+  </div>
