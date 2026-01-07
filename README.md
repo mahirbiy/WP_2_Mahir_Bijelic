@@ -1,3 +1,12 @@
+
+Dnevni Trackeri: Pratiš vodu, san, trening, pare, raspoloženje i navike na jednom mjestu.
+
+Vision Board: Možeš lijepiti slike i bilješke (drag & drop) da se motivišeš.
+
+Teme: Možeš mijenjati boje stranice (roza, plava, zelena, tamna).
+
+AI Uvidi: Aplikacija ti daje savjete na osnovu onoga što upišeš.
+
 # WP2MahirBijelic
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
