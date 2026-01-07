@@ -1,0 +1,57 @@
+<div class="pozadina-staklo">
+  <div class="plavi-krug"></div>
+  <div class="ljubicasti-krug"></div>
+
+  <div class="glavna-kartica">
+    
+    @if (authServis.isLoggedIn) {
+      <div class="zaglavlje">
+        <h1>Zdravo, {{ trenutniKorisnik }}!</h1>
+        <p>Već ste prijavljeni na svoj račun.</p>
+      </div>
+
+      <div class="logout-centar">
+        <button class="dugme-glavno" (click)="router.navigate(['/dashboard'])">
+          NAZAD NA DASHBOARD
+        </button>
+        <button type="button" class="dugme-tekst odjava-btn" (click)="odjaviSe()">
+          Odjavi se sa računa 🚪
+        </button>
+      </div>
+    }
+
+    @else {
+      <div class="zaglavlje">
+        <h1>{{ prijavaMode ? 'Prijava' : 'Registracija' }}</h1>
+        <p>{{ prijavaMode ? 'Prijavite se na svoj račun' : 'Kreirajte novi račun' }}</p>
+      </div>
+
+      <form (ngSubmit)="izvrsiAkciju()">
+        @if (!prijavaMode) {
+          <div class="input-group">
+            <input type="text" placeholder="Ime i prezime" class="unos-polje" name="ime" [(ngModel)]="podaci.ime" required>
+          </div>
+        }
+
+        <div class="input-group">
+          <input type="email" placeholder="Email adresa" class="unos-polje" name="email" [(ngModel)]="podaci.email" required>
+        </div>
+
+        <div class="input-group">
+          <input type="password" placeholder="Lozinka (min. 6 znakova)" class="unos-polje" name="lozinka" [(ngModel)]="podaci.lozinka" required>
+        </div>
+
+        <button type="submit" class="dugme-glavno">
+          {{ prijavaMode ? 'PRIDRUŽI SE' : 'REGISTRUJ SE' }}
+        </button>
+      </form>
+
+      <div class="podnozje">
+        {{ prijavaMode ? 'Nemaš račun?' : 'Već imaš račun?' }}
+        <button type="button" class="dugme-tekst" (click)="promijeniMod()">
+          {{ prijavaMode ? 'Napravi ga ovdje' : 'Prijavi se' }}
+        </button>
+      </div>
+    }
+  </div>
+</div>

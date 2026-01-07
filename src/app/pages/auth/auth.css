@@ -1,0 +1,150 @@
+
+.pozadina-staklo {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--pozadina, #f0f4f8); 
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.plavi-krug, .ljubicasti-krug {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.plavi-krug {
+  width: 450px;
+  height: 450px;
+  background: #3b82f6;
+  top: -150px;
+  right: -100px;
+}
+
+.ljubicasti-krug {
+  width: 350px;
+  height: 350px;
+  background: #8b5cf6;
+  bottom: -100px;
+  left: -80px;
+}
+
+
+.glavna-kartica {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.7); 
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(20px); 
+  padding: 45px 35px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.zaglavlje h1 {
+  margin-bottom: 8px;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+}
+
+.zaglavlje p {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 35px;
+}
+
+
+.unos-polje {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1.5px solid rgba(226, 232, 240, 0.8);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  font-size: 15px;
+  color: #1e293b;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.unos-polje:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  background: #ffffff;
+}
+
+
+.dugme-glavno {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+.dugme-glavno:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -3px rgba(37, 99, 235, 0.4);
+  filter: brightness(1.1);
+}
+
+.dugme-glavno:active {
+  transform: translateY(0);
+}
+
+
+.podnozje {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.dugme-tekst {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+  margin-left: 5px;
+  transition: color 0.2s;
+}
+
+.dugme-tekst:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+
+.odjava-btn {
+  margin-top: 25px;
+  color: #ef4444 !important;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.odjava-btn:hover {
+  opacity: 1;
+  text-decoration: none !important;
+}
